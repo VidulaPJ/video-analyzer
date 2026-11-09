@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<!-- index.html -- what you see in the window: five buttons, the list of clips to export (with the
+     "Save report as" buttons), the Clean up panel, and a text area. -->
+<html>
+<head>
+  <meta charset="UTF-8">
+  <!-- Only allow scripts and styles that come from this app's own files. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'">
+  <title>Video Analyzer</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 16px;
+      height: 100vh;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      background: #1e1f22;
+      color: #e6e6e6;
+    }
+    .buttons { display: flex; gap: 8px; }
+    button {
+      padding: 8px 16px;
+      font-size: 14px;
+      border: none;
+      border-radius: 4px;
+      background: #3574f0;
+      color: white;
+      cursor: pointer;
+    }
+    button:disabled { background: #555; cursor: default; }
+    /* The highlight mode dropdown next to "Analyze last match". */
+    select {
+      padding: 6px 8px;
+      font-size: 14px;
+      border: 1px solid #444;
+      border-radius: 4px;
+      background: #2b2d30;
+      color: #e6e6e6;
+      cursor: pointer;
+    }
+    select:disabled { color: #777; cursor: default; }
+    .info {
+      display: grid;
+      grid-template-columns: auto 1fr; /* label column, then value column */
+      gap: 4px 12px;
+      font-size: 13px;
+    }
+    .info .label { color: #9a9a9a; }
+    .info .value { overflow-wrap: anywhere; user-select: text; }
+    /* The "OBS:" line changes colour with what it says (set by renderer.js). */
+    .info .value.ready { color: #5fd16a; }   /* green: OBS is ready, or recording */
+    .info .value.loading { color: #f0b235; } /* amber: OBS is still loading */
+    .info .value.error { color: #ff6b68; }   /* red: something is wrong - the line says what */
+    /* The Retry button that sits after the "OBS:" text when there is an encoder problem. */
+    .obs-line { display: flex; align-items: center; gap: 10px; }
+    #obs-retry { padding: 2px 10px; font-size: 12px; flex: none; }
+    #obs-retry[hidden] { display: none; }
+    /* The list of clips to export. Hidden until there is something to show. */
+    #clips { display: none; flex-direction: column; gap: 8px; font-size: 13px; }
+    #clips.shown { display: flex; }
+    .clips-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; }
+    .clips-bar .label { color: #9a9a9a; }
+    .clips-bar label { cursor: pointer; }
+    .clips-bar .spacer { flex: 1; }
+    #clips button { padding: 4px 12px; font-size: 13px; }
+    #clips-warning { color: #f0b235; display: none; }
+    #clips-warning.shown { display: block; }
+    .clips-table { max-height: 190px; overflow-y: auto; border: 1px solid #333; border-radius: 4px; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { text-align: left; padding: 4px 8px; white-space: nowrap; }
+    th { position: sticky; top: 0; background: #2b2d30; color: #9a9a9a; font-weight: normal; }
+    /* The two columns with sentences in them may wrap, and share the spare width. */
+    td.who, td.title { white-space: normal; width: 50%; user-select: text; }
+    td.title { color: #9a9a9a; }
+    tr + tr td { border-top: 1px solid #2b2d30; }
+    .clips-table.empty { display: none; } /* a report with no moments: only the report buttons are shown */
+    /* The line under "Save report as ...": where the file went, and an Open button. */
+    .report-row { display: none; align-items: center; gap: 10px; }
+    .report-row.shown { display: flex; }
+    #report-path { overflow-wrap: anywhere; user-select: text; }
+    #report-path.error { color: #ff6b68; }
+    .progress-row { display: none; align-items: center; gap: 10px; }
+    .progress-row.shown { display: flex; }
+    progress { width: 220px; height: 12px; }
+    /* The Clean up panel: what is in _no_game. Hidden until Clean up is clicked. */
+    #cleanup { display: none; flex-direction: column; gap: 8px; font-size: 13px; }
+    #cleanup.shown { display: flex; }
+    #cleanup button { padding: 4px 12px; font-size: 13px; }
+    #cleanup button.danger { background: #c94f4f; }
+    #cleanup button.danger:disabled { background: #555; }
+    #cleanup-summary { user-select: text; overflow-wrap: anywhere; }
+    #cleanup-empty { color: #9a9a9a; }
+    td.reason { white-space: normal; width: 50%; color: #9a9a9a; user-select: text; }
+    textarea {
+      flex: 1;
+      min-height: 120px;
+      resize: none;
+      font-family: Consolas, monospace;
+      font-size: 13px;
+      background: #111214;
+      color: #d4d4d4;
+      border: 1px solid #333;
+      border-radius: 4px;
+      padding: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="buttons">
+    <button id="start">Start session</button>
+    <button id="stop" disabled>Stop session</button>
+    <button id="analyze">Analyze last match</button>
+    <!-- Which moments Analyze picks; saved as "highlightMode" in settings.json -->
+    <select id="highlight-mode" title="Which moments Analyze last match picks (saved in settings.json)">
+      <option value="mine">Mine: my kills only</option>
+      <option value="mine_and_fights">Mine + team fights</option>
+      <option value="all">All kill moments</option>
+    </select>
+    <button id="attach" title="Pick a video file for a session, e.g. one you recorded in OBS yourself">Attach video</button>
+    <button id="cleanup-btn" title="Show the sessions with no game (in _no_game), to delete or restore them">Clean up</button>
+  </div>
+  <!-- Status lines, filled in by renderer.js -->
+  <div class="info">
+    <span class="label">OBS:</span>
+    <span class="obs-line"><span class="value" id="obs-status">Checking...</span> <button id="obs-retry" hidden>Retry</button></span>
+    <span class="label">Game:</span>  <span class="value" id="game-status">-</span>
+    <span class="label">Video:</span> <span class="value" id="video-path">-</span>
+    <span class="label">Folder:</span> <span class="value" id="session-folder">-</span>
+  </div>
+  <!-- The clips that can be exported: filled in by renderer.js after "Analyze last match" -->
+  <div id="clips">
+    <div class="clips-bar">
+      <span class="label">Framing:</span>
+      <label><input type="radio" name="framing" value="native" checked> Native (1920x1080)</label>
+      <label><input type="radio" name="framing" value="vertical"> Vertical 9:16 (whole picture, blurred fill)</label>
+      <span class="spacer"></span>
+      <button id="export-all">Export all</button>
+      <button id="open-folder" hidden>Open folder</button>
+      <button id="save-pdf">Save report as PDF</button>
+      <button id="save-docx">Save report as Word</button>
+    </div>
+    <div class="report-row" id="report-row">
+      <span id="report-path"></span>
+      <button id="open-report" hidden>Open</button>
+    </div>
+    <div id="clips-warning"></div>
+    <div class="clips-table">
+      <table>
+        <thead>
+          <tr><th>Clip</th><th>Who</th><th>Title</th><th>Game time</th><th>Video time</th><th>Clip window</th><th></th></tr>
+        </thead>
+        <tbody id="clip-rows"></tbody>
+      </table>
+    </div>
+    <div class="progress-row" id="progress-row">
+      <progress id="export-progress" max="1" value="0"></progress>
+      <span id="export-text"></span>
+    </div>
+  </div>
+  <!-- The sessions with no game, in _no_game: filled in by renderer.js when Clean up is clicked -->
+  <div id="cleanup">
+    <div class="clips-bar">
+      <span id="cleanup-summary"></span>
+      <span class="spacer"></span>
+      <button id="cleanup-delete-all" class="danger">Delete all now</button>
+      <button id="cleanup-close">Close</button>
+    </div>
+    <div id="cleanup-empty">There is nothing in _no_game.</div>
+    <div class="clips-table" id="cleanup-table">
+      <table>
+        <thead>
+          <tr><th>Name</th><th>Date</th><th>Size</th><th>Reason</th><th>Deleted automatically</th><th></th></tr>
+        </thead>
+        <tbody id="cleanup-rows"></tbody>
+      </table>
+    </div>
+  </div>
+  <textarea id="output" readonly></textarea>
+
+  <script src="renderer.js"></script>
+</body>
+</html>

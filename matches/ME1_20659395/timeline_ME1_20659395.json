@@ -1,0 +1,154 @@
+[
+  {
+    "timestampMs": 74386,
+    "gameTime": "01:14",
+    "eventType": "assist",
+    "description": "VDRJ#0405 assisted ssdurza#4006 in killing Ichika Nakano#QQ1IN",
+    "killerName": "ssdurza#4006",
+    "victimName": "Ichika Nakano#QQ1IN"
+  },
+  {
+    "timestampMs": 154335,
+    "gameTime": "02:34",
+    "eventType": "assist",
+    "description": "VDRJ#0405 assisted ssdurza#4006 in killing Miku Nakano#QQ3MN",
+    "killerName": "ssdurza#4006",
+    "victimName": "Miku Nakano#QQ3MN"
+  },
+  {
+    "timestampMs": 160918,
+    "gameTime": "02:40",
+    "eventType": "assist",
+    "description": "VDRJ#0405 assisted ssdurza#4006 in killing Ichika Nakano#QQ1IN",
+    "killerName": "ssdurza#4006",
+    "victimName": "Ichika Nakano#QQ1IN"
+  },
+  {
+    "timestampMs": 257259,
+    "gameTime": "04:17",
+    "eventType": "kill",
+    "description": "VDRJ#0405 killed Ichika Nakano#QQ1IN",
+    "killerName": "VDRJ#0405",
+    "victimName": "Ichika Nakano#QQ1IN"
+  },
+  {
+    "timestampMs": 297678,
+    "gameTime": "04:57",
+    "eventType": "death",
+    "description": "Tristana diff#ReKo killed VDRJ#0405",
+    "killerName": "Tristana diff#ReKo",
+    "victimName": "VDRJ#0405"
+  },
+  {
+    "timestampMs": 370002,
+    "gameTime": "06:10",
+    "eventType": "kill",
+    "description": "VDRJ#0405 killed Tristana diff#ReKo",
+    "killerName": "VDRJ#0405",
+    "victimName": "Tristana diff#ReKo"
+  },
+  {
+    "timestampMs": 407104,
+    "gameTime": "06:47",
+    "eventType": "kill",
+    "description": "VDRJ#0405 killed Tristana diff#ReKo",
+    "killerName": "VDRJ#0405",
+    "victimName": "Tristana diff#ReKo"
+  },
+  {
+    "timestampMs": 473455,
+    "gameTime": "07:53",
+    "eventType": "assist",
+    "description": "VDRJ#0405 assisted 伞兵一号卢本伟准备就绪#卢本伟 in killing Yotsuba Nakano#QQ4YN",
+    "killerName": "伞兵一号卢本伟准备就绪#卢本伟",
+    "victimName": "Yotsuba Nakano#QQ4YN"
+  },
+  {
+    "timestampMs": 474958,
+    "gameTime": "07:54",
+    "eventType": "death",
+    "description": "Tristana diff#ReKo killed VDRJ#0405",
+    "killerName": "Tristana diff#ReKo",
+    "victimName": "VDRJ#0405"
+  },
+  {
+    "timestampMs": 571470,
+    "gameTime": "09:31",
+    "eventType": "death",
+    "description": "Nino Nakano#QQ2JB killed VDRJ#0405",
+    "killerName": "Nino Nakano#QQ2JB",
+    "victimName": "VDRJ#0405"
+  },
+  {
+    "timestampMs": 658111,
+    "gameTime": "10:58",
+    "eventType": "assist",
+    "description": "VDRJ#0405 assisted ssdurza#4006 in killing Miku Nakano#QQ3MN",
+    "killerName": "ssdurza#4006",
+    "victimName": "Miku Nakano#QQ3MN"
+  },
+  {
+    "timestampMs": 672257,
+    "gameTime": "11:12",
+    "eventType": "kill",
+    "description": "VDRJ#0405 killed Ichika Nakano#QQ1IN",
+    "killerName": "VDRJ#0405",
+    "victimName": "Ichika Nakano#QQ1IN"
+  },
+  {
+    "timestampMs": 704318,
+    "gameTime": "11:44",
+    "eventType": "death",
+    "description": "Miku Nakano#QQ3MN killed VDRJ#0405",
+    "killerName": "Miku Nakano#QQ3MN",
+    "victimName": "VDRJ#0405"
+  },
+  {
+    "timestampMs": 765374,
+    "gameTime": "12:45",
+    "eventType": "kill",
+    "description": "VDRJ#0405 killed Nino Nakano#QQ2JB",
+    "killerName": "VDRJ#0405",
+    "victimName": "Nino Nakano#QQ2JB"
+  },
+  {
+    "timestampMs": 768046,
+    "gameTime": "12:48",
+    "eventType": "assist",
+    "description": "VDRJ#0405 assisted Coach Zezo#COACH in killing Ichika Nakano#QQ1IN",
+    "killerName": "Coach Zezo#COACH",
+    "victimName": "Ichika Nakano#QQ1IN"
+  },
+  {
+    "timestampMs": 781180,
+    "gameTime": "13:01",
+    "eventType": "death",
+    "description": "Miku Nakano#QQ3MN killed VDRJ#0405",
+    "killerName": "Miku Nakano#QQ3MN",
+    "victimName": "VDRJ#0405"
+  },
+  {
+    "timestampMs": 784720,
+    "gameTime": "13:04",
+    "eventType": "assist",
+    "description": "VDRJ#0405 assisted ssdurza#4006 in killing Miku Nakano#QQ3MN",
+    "killerName": "ssdurza#4006",
+    "victimName": "Miku Nakano#QQ3MN"
+  },
+  {
+    "timestampMs": 924052,
+    "gameTime": "15:24",
+    "eventType": "kill",
+    "description": "VDRJ#0405 killed Ichika Nakano#QQ1IN",
+    "killerName": "VDRJ#0405",
+    "victimName": "Ichika Nakano#QQ1IN"
+  },
+  {
+    "timestampMs": 926490,
+    "gameTime": "15:26",
+    "eventType": "death",
+    "description": "Tristana diff#ReKo killed VDRJ#0405",
+    "killerName": "Tristana diff#ReKo",
+    "victimName": "VDRJ#0405"
+  }
+]

@@ -1,0 +1,23 @@
+﻿Clean build started: 10/27/2026 22:35:49 (old dist folder deleted; old exe backed up in backups\2026-10-27_exe_before_rebuild)
+
+> videoanalyzer-app@0.1.0 build
+> node save_project_path.js && electron-builder --win portable
+
+Saved project folder for the build: H:\Me\VideoAnalyzer
+  • electron-builder  version=26.15.3 os=10.0.22621
+  • loaded configuration  file=package.json ("build" field)
+  • author is missed in the package.json  appPackageFile=H:\Me\VideoAnalyzer\app\package.json
+  • executing @electron/rebuild  electronVersion=44.6.0 arch=x64 buildFromSource=false workspaceRoot=H:\Me\VideoAnalyzer\app projectDir=./ appDir=./
+  • installing native dependencies  arch=x64
+  • completed installing native dependencies
+  • packaging       platform=win32 arch=x64 electron=44.6.0 appOutDir=dist\win-unpacked
+  • downloaded      label=electron progress=100%
+  • downloaded electron zip extracted successfully  output=H:\Me\VideoAnalyzer\app\dist\win-unpacked
+  • asar usage is disabled — this is strongly not recommended  solution=enable asar and use asarUnpack to unpack files that must be externally available
+  • searching for node modules  pm=npm searchDir=H:\Me\VideoAnalyzer\app
+  • asar usage is disabled — this is strongly not recommended  solution=enable asar and use asarUnpack to unpack files that must be externally available
+  • executable resource editing and code signing skipped — signAndEditExecutable is false. To skip only code signing while keeping icon and metadata applied, use signExecutable: false instead.  exe=dist\win-unpacked\VideoAnalyzer.exe
+  • building        target=portable file=dist\VideoAnalyzer.exe archs=x64
+  • default Electron icon is used  reason=application icon is not set
+  • signing with signtool.exe  path=dist\VideoAnalyzer.exe
+Build ended: 10/27/2026 22:44:54  ExitCode: 0

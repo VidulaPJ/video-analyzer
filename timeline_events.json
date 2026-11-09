@@ -1,0 +1,194 @@
+[
+  {
+    "timestampMs": 75248,
+    "gameTime": "01:15",
+    "eventType": "death",
+    "description": "SUSPECT#777 killed VDRJ#0405",
+    "killerName": "SUSPECT#777",
+    "victimName": "VDRJ#0405"
+  },
+  {
+    "timestampMs": 101898,
+    "gameTime": "01:41",
+    "eventType": "death",
+    "description": "T soso T#MENA killed VDRJ#0405",
+    "killerName": "T soso T#MENA",
+    "victimName": "VDRJ#0405"
+  },
+  {
+    "timestampMs": 152025,
+    "gameTime": "02:32",
+    "eventType": "assist",
+    "description": "VDRJ#0405 assisted Yhwach#2008 in killing T soso T#MENA",
+    "killerName": "Yhwach#2008",
+    "victimName": "T soso T#MENA"
+  },
+  {
+    "timestampMs": 154997,
+    "gameTime": "02:34",
+    "eventType": "assist",
+    "description": "VDRJ#0405 assisted ABUALHARAS#BAR in killing Akagami#YONKO",
+    "killerName": "ABUALHARAS#BAR",
+    "victimName": "Akagami#YONKO"
+  },
+  {
+    "timestampMs": 179443,
+    "gameTime": "02:59",
+    "eventType": "death",
+    "description": "StonedInHell#6688 killed VDRJ#0405",
+    "killerName": "StonedInHell#6688",
+    "victimName": "VDRJ#0405"
+  },
+  {
+    "timestampMs": 215273,
+    "gameTime": "03:35",
+    "eventType": "assist",
+    "description": "VDRJ#0405 assisted Pandawy#z6z in killing T soso T#MENA",
+    "killerName": "Pandawy#z6z",
+    "victimName": "T soso T#MENA"
+  },
+  {
+    "timestampMs": 216776,
+    "gameTime": "03:36",
+    "eventType": "death",
+    "description": "SUSPECT#777 killed VDRJ#0405",
+    "killerName": "SUSPECT#777",
+    "victimName": "VDRJ#0405"
+  },
+  {
+    "timestampMs": 236446,
+    "gameTime": "03:56",
+    "eventType": "assist",
+    "description": "VDRJ#0405 assisted Yhwach#2008 in killing Nutbag#00000",
+    "killerName": "Yhwach#2008",
+    "victimName": "Nutbag#00000"
+  },
+  {
+    "timestampMs": 280963,
+    "gameTime": "04:40",
+    "eventType": "death",
+    "description": "StonedInHell#6688 killed VDRJ#0405",
+    "killerName": "StonedInHell#6688",
+    "victimName": "VDRJ#0405"
+  },
+  {
+    "timestampMs": 327342,
+    "gameTime": "05:27",
+    "eventType": "death",
+    "description": "StonedInHell#6688 killed VDRJ#0405",
+    "killerName": "StonedInHell#6688",
+    "victimName": "VDRJ#0405"
+  },
+  {
+    "timestampMs": 337629,
+    "gameTime": "05:37",
+    "eventType": "assist",
+    "description": "VDRJ#0405 assisted Yhwach#2008 in killing Akagami#YONKO",
+    "killerName": "Yhwach#2008",
+    "victimName": "Akagami#YONKO"
+  },
+  {
+    "timestampMs": 370190,
+    "gameTime": "06:10",
+    "eventType": "death",
+    "description": "Nutbag#00000 killed VDRJ#0405",
+    "killerName": "Nutbag#00000",
+    "victimName": "VDRJ#0405"
+  },
+  {
+    "timestampMs": 415275,
+    "gameTime": "06:55",
+    "eventType": "death",
+    "description": "Akagami#YONKO killed VDRJ#0405",
+    "killerName": "Akagami#YONKO",
+    "victimName": "VDRJ#0405"
+  },
+  {
+    "timestampMs": 479632,
+    "gameTime": "07:59",
+    "eventType": "death",
+    "description": "StonedInHell#6688 killed VDRJ#0405",
+    "killerName": "StonedInHell#6688",
+    "victimName": "VDRJ#0405"
+  },
+  {
+    "timestampMs": 482938,
+    "gameTime": "08:02",
+    "eventType": "assist",
+    "description": "VDRJ#0405 assisted Yhwach#2008 in killing Nutbag#00000",
+    "killerName": "Yhwach#2008",
+    "victimName": "Nutbag#00000"
+  },
+  {
+    "timestampMs": 526686,
+    "gameTime": "08:46",
+    "eventType": "death",
+    "description": "StonedInHell#6688 killed VDRJ#0405",
+    "killerName": "StonedInHell#6688",
+    "victimName": "VDRJ#0405"
+  },
+  {
+    "timestampMs": 571735,
+    "gameTime": "09:31",
+    "eventType": "death",
+    "description": "Akagami#YONKO killed VDRJ#0405",
+    "killerName": "Akagami#YONKO",
+    "victimName": "VDRJ#0405"
+  },
+  {
+    "timestampMs": 615517,
+    "gameTime": "10:15",
+    "eventType": "death",
+    "description": "StonedInHell#6688 killed VDRJ#0405",
+    "killerName": "StonedInHell#6688",
+    "victimName": "VDRJ#0405"
+  },
+  {
+    "timestampMs": 703057,
+    "gameTime": "11:43",
+    "eventType": "death",
+    "description": "T soso T#MENA killed VDRJ#0405",
+    "killerName": "T soso T#MENA",
+    "victimName": "VDRJ#0405"
+  },
+  {
+    "timestampMs": 746642,
+    "gameTime": "12:26",
+    "eventType": "assist",
+    "description": "VDRJ#0405 assisted Klaus#3014 in killing Nutbag#00000",
+    "killerName": "Klaus#3014",
+    "victimName": "Nutbag#00000"
+  },
+  {
+    "timestampMs": 747043,
+    "gameTime": "12:27",
+    "eventType": "death",
+    "description": "SUSPECT#777 killed VDRJ#0405",
+    "killerName": "SUSPECT#777",
+    "victimName": "VDRJ#0405"
+  },
+  {
+    "timestampMs": 792900,
+    "gameTime": "13:12",
+    "eventType": "kill",
+    "description": "VDRJ#0405 killed T soso T#MENA",
+    "killerName": "VDRJ#0405",
+    "victimName": "T soso T#MENA"
+  },
+  {
+    "timestampMs": 796640,
+    "gameTime": "13:16",
+    "eventType": "death",
+    "description": "Nutbag#00000 killed VDRJ#0405",
+    "killerName": "Nutbag#00000",
+    "victimName": "VDRJ#0405"
+  },
+  {
+    "timestampMs": 885942,
+    "gameTime": "14:45",
+    "eventType": "death",
+    "description": "Nutbag#00000 killed VDRJ#0405",
+    "killerName": "Nutbag#00000",
+    "victimName": "VDRJ#0405"
+  }
+]

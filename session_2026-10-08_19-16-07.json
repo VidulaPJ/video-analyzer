@@ -1,0 +1,22 @@
+{
+  "sessionStartedAt": {
+    "iso": "2026-10-08T15:16:07.654Z",
+    "local": "8/10/2026, 7:16:07 pm"
+  },
+  "obsRecordStartSentAt": {
+    "iso": "2026-10-08T15:16:07.660Z",
+    "local": "8/10/2026, 7:16:07 pm"
+  },
+  "obsRecordingActuallyStartedAt": {
+    "iso": "2026-10-08T15:16:07.742Z",
+    "local": "8/10/2026, 7:16:07 pm"
+  },
+  "videoFile": "F:/ME/OBS Recording/2026-10-08 19-16-07.mp4",
+  "videoDurationSeconds": 30.283333,
+  "logFile": null,
+  "sessionEndedAt": {
+    "iso": "2026-10-08T15:16:39.214Z",
+    "local": "8/10/2026, 7:16:39 pm"
+  },
+  "endReason": "No game started within 30 seconds"
+}

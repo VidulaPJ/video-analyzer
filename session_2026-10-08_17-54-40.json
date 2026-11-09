@@ -1,0 +1,17 @@
+{
+  "sessionStartedAt": {
+    "iso": "2026-10-08T13:54:40.245Z",
+    "local": "8/10/2026, 5:54:40 pm"
+  },
+  "obsRecordStartSentAt": {
+    "iso": "2026-10-08T13:54:40.756Z",
+    "local": "8/10/2026, 5:54:40 pm"
+  },
+  "videoFile": "F:/ME/OBS Recording/2026-10-08 17-54-41.mp4",
+  "logFile": null,
+  "sessionEndedAt": {
+    "iso": "2026-10-08T13:54:44.927Z",
+    "local": "8/10/2026, 5:54:44 pm"
+  },
+  "endReason": "Stopped by user"
+}

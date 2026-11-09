@@ -1,0 +1,22 @@
+{
+  "sessionStartedAt": {
+    "iso": "2026-10-08T14:43:39.274Z",
+    "local": "8/10/2026, 6:43:39 pm"
+  },
+  "obsRecordStartSentAt": {
+    "iso": "2026-10-08T14:43:40.030Z",
+    "local": "8/10/2026, 6:43:40 pm"
+  },
+  "obsRecordingActuallyStartedAt": {
+    "iso": "2026-10-08T14:43:40.539Z",
+    "local": "8/10/2026, 6:43:40 pm"
+  },
+  "videoFile": "F:/ME/OBS Recording/2026-10-08 18-43-40.mp4",
+  "videoDurationSeconds": 3.916667,
+  "logFile": null,
+  "sessionEndedAt": {
+    "iso": "2026-10-08T14:43:51.296Z",
+    "local": "8/10/2026, 6:43:51 pm"
+  },
+  "endReason": "Stopped by user"
+}

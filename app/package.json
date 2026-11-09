@@ -1,0 +1,53 @@
+{
+  "name": "videoanalyzer-app",
+  "version": "0.1.0",
+  "description": "Desktop window for running the live logger and (later) analyzing matches",
+  "main": "main.js",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "check-times": "node time_check.js",
+    "build": "node save_project_path.js && electron-builder --win portable"
+  },
+  "build": {
+    "appId": "com.videoanalyzer.app",
+    "productName": "VideoAnalyzer",
+    "asar": false,
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer.js",
+      "index.html",
+      "logger_runner.js",
+      "obs.js",
+      "game.js",
+      "processes.js",
+      "analyze.js",
+      "report.js",
+      "export.js",
+      "who.js",
+      "report_export.js",
+      "time_check.js",
+      "end_stats.js",
+      "resource_monitor.js",
+      "no_game.js",
+      "project-path.json"
+    ],
+    "win": {
+      "signAndEditExecutable": false
+    },
+    "portable": {
+      "artifactName": "VideoAnalyzer.exe",
+      "unpackDirName": true
+    }
+  },
+  "devDependencies": {
+    "electron": "^44.6.0",
+    "electron-builder": "^26.15.3"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.133.0",
+    "docx": "9.8.1",
+    "obs-websocket-js": "^5.0.8"
+  }
+}
